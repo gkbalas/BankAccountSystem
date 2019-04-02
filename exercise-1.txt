@@ -1,0 +1,64 @@
+Create a BankAccount system 
+
+Should hold info of Customer (firstname, lastname, iban)
+Should support CreditAccount, SavingsAccount, 
+LotteryAccount
+All types should have balance, transactionlimit
+and print statement transaction.
+
+
+
+SavingsAccount should have Interestrate ;
+Saving should support transactions  Withdraw(ammount) and deposit(ammount) and addinterest();
+
+caution:Withdraw should be check for balance and transactionlimit
+note:addinterest add annual interestrate (interestrate*balance)
+
+
+
+CreditAccount should have interestrate and fee and addpayment, charge and deposit, also must have creditlimit
+Transactions should be 
+Charge(ammount) 
+when using your credit card and it has to subtract also ammount*fee from your balance,
+deposit(ammount) 
+when you pay your credit card and should add ammount to your balance
+addpayment() should subtract annual interestrate (interestrate*balance)
+
+caution:charge should be check for balance and transactionlimit and creditlimit
+
+
+LotteryAccount should have interest and winpercentage, winammount,
+ 
+for each transaction of type withdraw or deposit should have a winpercentage to add  winammount to balance;
+otherwise should work as a 
+SavingsAccount
+
+
+
+IBAN XXXXXX
+
+Name:FirstName LastName
+
+Type:Savings
+
+DATE       
+| REASON | AMOUNT  | BALANCE
+
+------------|---------|----------------
+
+10/04/2014  | DEPOSIT  | 500.00  | 1400.00
+02/04/2014  | WITHDRAW | -100.00 | 900.00
+01/04/2014  | INTEREST  | 100.00 | 1000.00
+
+
+The program should have the option to create an account of any kind
+e.q.
+create account: Savings
+customer: name surnme
+iban: xxxxxx
+then should give the option to do transactions  (deposit, withdraw, pring etc) until the user chooses quit
+e.q. deposit 100,
+withdraw 10,
+addinterest()
+printstatement()
+ quiting
